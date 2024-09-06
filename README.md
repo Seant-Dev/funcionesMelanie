@@ -34,4 +34,46 @@ gcc suma.c -o suma
 
 Cómo se vio en el programa anterior su funcionamiento es correcto, pero a medida que los programas crecen en complejidad, por ejemplo si quisiéramos hacer la suma de 10 pares de números enteros o de 100 pares de números enteros tendríamos que reescribir todas las líneas que hacen la suma y declarar variables suficientes para eso, o en el mejor de los casos poner todo de un ciclo que se repita las veces que sean necesarias, es aquí en donde entra en juego el papel de la programación con funciones.
 
-La programación con funciones consiste básicamente en tomar una parte importante de nuestro código (Generalmente aquella que realiza una operación o un procedimiento) y ponerla dentro de otro subprograma (también llamado función) diferente a la función PRINCIPAL 'main()'
+La programación con funciones consiste básicamente en tomar una parte importante de nuestro código (Generalmente aquella que realiza una operación o un procedimiento) y ponerla dentro de otro subprograma (también llamado función) diferente a la función PRINCIPAL 'main()', esto se hace con distintas finalidades pero generalmente se emplea cuando tratamos de tener un código más fácil de entender, más fácil de mantener y cuando una operación se va a utilizar más de una vez.
+
+A continuación se presenta un código que hace lo mismo que el primero presentado, pero con la diferencia de que utiliza una función llamada suma(), llegado aquí es importante aclarar que el nombre de las funciones se queda a elección del programador, generalmente es posible asignar cualquier nombre siempre y cuando no sea una palabra reservada del lenguaje C, pero también se recomienda darle un nombre acordé a el funcionamiento que realizará.
+
+```c
+#include <stdio.h>
+
+// Declaracion de la funcion
+int suma(int x, int y);
+
+// Funcion principal del programa
+main(){
+
+// Declaracion de variables
+int x, y, resultado;
+
+// Lectura de datos
+printf("Ingresa el valor de x: ");
+scanf("%d", &x);
+printf("Ingresa el valor de y: ");
+scanf("%d", &y);
+
+// Llamada a la funcion suma, en esta seccion pasamos los valores de x, y a la funcion
+// previamente declarada, esa funcion realiza los calculos y nos regresa un resultado
+// ese resultado se guarda en la variable 'resultado' 
+resultado = suma(x, y);
+
+//Imprimimos el resultado de nuesta suma utilizando la varaible 'resultado'
+printf("El resultado de la suma es: %d \n", resultado);
+
+}
+
+// Definicion de la funcion tipo int con retorno (regresa un dato tipo int)
+// Recibe dos datos como parametros
+int suma(int x, int y){
+// Declaracion de variable para guardar el resultado
+int r = 0;
+// suma de los dos valores
+r = x + y;
+// regresamos el valor de r para asignarlo a la variable resultado en el main()
+return r;
+}
+```
