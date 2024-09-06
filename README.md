@@ -31,3 +31,7 @@ gcc suma.c -o suma
 ```
 
 ![Ejecución suma](https://github.com/Seant-Dev/funcionesMelanie/blob/main/Captura%20de%20pantalla%202024-09-06%20092440.png)
+
+Cómo se vio en el programa anterior su funcionamiento es correcto, pero a medida que los programas crecen en complejidad, por ejemplo si quisiéramos hacer la suma de 10 pares de números enteros o de 100 pares de números enteros tendríamos que reescribir todas las líneas que hacen la suma y declarar variables suficientes para eso, o en el mejor de los casos poner todo de un ciclo que se repita las veces que sean necesarias, es aquí en donde entra en juego el papel de la programación con funciones.
+
+La programación con funciones consiste básicamente en tomar una parte importante de nuestro código (Generalmente aquella que realiza una operación o un procedimiento) y ponerla dentro de otro subprograma (también llamado función) diferente a la función PRINCIPAL 'main()'
