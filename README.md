@@ -25,5 +25,9 @@ printf("El resultado de la suma es: %d \n", resultado);
 
 }
 ```
+A continuación se muestra la compilación y ejecución del programa al cual llamamos suma.c y su comando para compilar sería.
+```
+gcc suma.c -o suma
+```
 
-![test](https://github.com/Seant-Dev/funcionesMelanie/blob/main/Captura%20de%20pantalla%202024-09-06%20092440.png)
+![Ejecución suma](https://github.com/Seant-Dev/funcionesMelanie/blob/main/Captura%20de%20pantalla%202024-09-06%20092440.png)
