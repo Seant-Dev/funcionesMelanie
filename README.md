@@ -3,4 +3,4 @@ Cómo se vio durante la primera parte del curso de programación estructurada, l
 
 El siguiente es un ejemplo de programa escrito en lenguaje C que pide al usuario dos números enteros para sumarlos y mostrar su resultado en pantalla:
 
-!https://github.com/Seant-Dev/funcionesMelanie/blob/main/Captura%20de%20pantalla%202024-09-06%20092440.png
+!(https://github.com/Seant-Dev/funcionesMelanie/blob/main/Captura%20de%20pantalla%202024-09-06%20092440.png)
