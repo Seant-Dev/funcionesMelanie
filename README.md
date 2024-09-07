@@ -77,3 +77,68 @@ r = x + y;
 return r;
 }
 ```
+
+la instruccion para compilar este codigo en el servidor unix de la UAM es la siguiente:
+
+```
+gcc sumaFuncion.c -o sumaFuncion
+```
+
+La ejecucion del programa es la siguiente, como se puede observar funciona de igual manera que el primer programa que realiza la suma, con diferencias en su estructura:
+
+![Ejecución sumaFuncion](https://github.com/Seant-Dev/funcionesMelanie/blob/main/Captura%20de%20pantalla%202024-09-06%20091754.png)
+
+Por ultimo como ejemplo tenemos este otro codigo que realiza el promedio de distintas calificaciones por medio de funciones, si analizamos el codigo con detenimineto podemos notar que dentro de la funcion PRINCIPAL unicamente se solicita el numero de calificaciones que seran ingresadas, fuera de eso el proceso de pedir calificaciones y obtener el promedio general se realiza por medio de una funcion llamada promedio(int n) que como unico parametro recibe el valor 'n' que fue el proporcionado por el usuario dentro de la funcion main().
+
+```c
+#include <stdio.h>
+
+// Funcion tipo float (regresa valor tipo float)
+// Esta es otra forma de definir una funcion, la declaracion y la
+// definicion se hacen en la misma parte (antes del main )
+float promedio(int n){
+// Definicion de las varaibles que se ocupan en la funcion
+int i = 1;
+float sumaAcumulada = 0, x;
+
+// Ciclo while que lee y acumula las 'n' calificaciones a promediar
+while(i <= n){
+	printf("Ingresa el valor #%d: ", i);
+	scanf("%f", &x);
+	sumaAcumulada = sumaAcumulada + x;
+	i = i + 1;
+}
+
+// regresamos al main la division de la suma acumulativa dividida por
+// el numero de alumnos 'n' lo que nos da el promedio total.
+return sumaAcumulada/n;
+}
+
+// En la funcion PRINCIPAL lo unico que hacemos es pedir al usuario
+// el numero de calificaciones que va a promediar.
+main(){
+// Declaracion de las variables utilizadas dentrod el main
+int n;
+float resultado;
+
+// Pedimos al usuario que ingrese la cantidad de calificaciones a promediar
+printf("Cuantos valores vas a promediar: ");
+scanf("%d", &n);
+
+// Asignamos el resultado regresado por la funcion a la varaible 'resultado'
+resultado = promedio(n);
+
+// Imprimimos el resultado con ayuda de la variable resultado
+printf("El promedio es: %f \n", resultado);
+}
+```
+
+igualmente para compilar el codigo tenemos las siguientes instrucciones que se ejecutan en el servidor unix de la UAM
+
+```
+gcc promedioFuncion.c -o promedioFuncion
+```
+
+y su ejecucion seria la siguiente:
+
+![Ejecución promedioFuncion](https://github.com/Seant-Dev/funcionesMelanie/blob/main/Captura%20de%20pantalla%202024-09-06%20091851.png)
